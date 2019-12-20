@@ -1,0 +1,148 @@
+.HolyGrail_middle_public_page, .HolyGrail_middle_private_page {
+  flex: 1;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+}
+
+.HolyGrail_middle_private_page {
+  background-color: whitesmoke;
+}
+
+.page_figure_container {
+  display: block;
+  margin: 20px auto 40px auto;
+  width: 600px;
+  text-align: center;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  box-shadow: 15px 17px 13px 17px rgba(216, 221, 223, 0.63);
+}
+
+.page_image_container {
+  display: block;
+  margin: 20px 20px 20px 20px;
+}
+
+.page_caption {
+  display: block;
+  margin: 10px auto 20px auto;
+}
+
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  padding: 20px 20px 30px 0px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 800;
+  color: rgb(23, 25, 167);
+}
+
+h2 {
+  padding: 40px 20px 30px 0px;
+  letter-spacing: px;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(18, 20, 124);
+}
+
+h3 {
+  padding: 10px 0px 10px 0px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(13, 14, 87);
+}
+
+p {
+  padding: 10px 0px 10px 0px;
+  color: black;
+}
+
+img {
+  /* Decisive to keep the picture in the flexbox! */
+  max-width: 100%;
+}
+
+strong {
+  color: var(--blue90);
+  font-weight: 900;
+}
+
+ul {
+  padding-left: 40px;
+  margin-left: 50px;
+}
+
+li {
+  color: black;
+  padding-left: 40px;
+  list-style-type: square;
+}
+
+a {
+  color: rgb(37, 37, 151);
+}
+
+blockquote {
+  font-size: 20px;
+  width: 60%;
+  margin: 20px auto 20px 60px;
+  font-family: Kalam;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 20px 40px;
+  border-left: 8px solid #78C0A8;
+  line-height: 1.6;
+  position: relative;
+  background-color: rgb(215, 224, 213);
+}
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #78C0A8;
+  font-size: 4em;
+  font-size: 2em;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  color: #78C0A8;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 1em;
+  background-color: rgb(215, 224, 213);
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  color: #78C0A8;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 1em;
+}

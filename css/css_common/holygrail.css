@@ -1,0 +1,75 @@
+.HolyGrail  {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* height: 100vh; */
+  min-height: 100vh;
+  max-width: 3840px;
+  background-color: var(--prussianblue);
+  background-image: url(../../images/img_layout/280675_GettyImages-180403767_super_low.jpg);
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Ubuntu';
+}
+
+.HolyGrail_header {
+  position: sticky;
+  flex: 0 0 10px;
+  display: flex;
+  padding: 10px 0 0 0;
+  background-color: var(--blue100);
+  background-color: var(--prussianblue);
+  border-bottom: 1px solid var(--blue10);
+}
+
+.HolyGrail_login {
+  position: sticky;
+  flex: 0 0 32px;
+  display: flex;
+  margin: 10px 0 0 0;
+}
+
+.HolyGrail_slogan {
+  flex: 0 0 32px;
+  display: flex;
+  margin: 10px 0 0 0;
+}
+
+.HolyGrail_middle {
+  flex: 1;
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.HolyGrail_footer {
+  flex: 0 0 100px;
+  display: flex;
+  background-color: var(--prussianblue);
+  color: whitesmoke;
+}
+
+.HolyGrail_final {
+  flex: 0 0 20px;
+  display: flex;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.column_center {
+  flex: 0 0 64%;
+  order: 0;
+}
+
+.column_left {
+  flex: 0 0 18%;
+  order: -1;
+  background-color: var(--blue20);
+  opacity: 0.0;
+}
+
+.column_right {
+  flex: 0 0 18%;
+  order: 1;
+  opacity: 0.0;
+}
