@@ -1,4 +1,4 @@
-.HolyGrail  {
+.HolyGrail {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,8 +6,7 @@
   min-height: 100vh;
   max-width: 3840px;
   background-color: var(--prussianblue);
-  background-image: url(../../images/img_layout/280675_GettyImages-180403767_super_low.jpg);
-  background-size: cover;
+  background-color: whitesmoke;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-family: 'Ubuntu';
 }
