@@ -68,11 +68,6 @@ Together with a suitable architecture containers can make it easier for a larger
 Kubernetes is the de facto standard to manage such containers. Kubernetes inherits from Google's Borg system. In general, many experts assess Google to be most advanced in this area. Hence, starting on GCP with containrization might be felt as a good and natural choice.
 
 
-## Multi-Cloud
-
-Staying on Google's Cloud only, however, might not be the last step in the evolution described here. There are various reason to diversify to other Cloud Providers. 
-As Kubernetes and the services required to run containerized services, in particular the databases,are known to differ on the various cloud providers, a homogeneous layer that abstracts from theses differences is welcome. 
-Gardener provides such a layer and should be considered to move from one Cloud Providers out to many Cloud Providers.
 
 
 
