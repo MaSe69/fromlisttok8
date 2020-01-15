@@ -1,6 +1,6 @@
 ---
 layout: public
-title: K8s Commercialization
+title: From Lists to K8s
 permalink: /index
 tagline: Tagline
 ---

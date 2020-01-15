@@ -1,6 +1,6 @@
 ---
 layout: page_public
-title: Partner Offerings On K8s
+title: From Lists to K8s
 meta: Overview Meta
 permalink: /fromliststok8sservices/
 ---
