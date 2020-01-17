@@ -63,7 +63,17 @@ on the input side
 and on the output side 
 - data analysis
 
+## Master data
 
+Create a csv and upload it to your Python program.
+
+## Transactional data
+
+Use a random generator to simulate the usage of the program.
+
+## Analyse the data
+
+Loop over the final data to get results from which the original question can be answered.
 
 
 
