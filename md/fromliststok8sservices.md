@@ -15,6 +15,13 @@ However, Kubernetes comes with quite some overhead and it can be expensive when 
 This leads to the question, if containerization is really always necessary. If not, what would be appropriate steps leading to a containerized application.
 
 
+# A Story and Examples
+
+As the matter is complex, it is best to go on this journey with a story.
+Taken from real life, I start with a simple example and evolve it slowly to complexity.
+[Story and Examples](../example_start)
+
+
 ## Starting small - and sketching until it fits
 
 A professional painter would never start with tiny details on a big painting.

@@ -1,6 +1,6 @@
 ---
 layout: page_public
-title: LIst to K8s
+title: List to K8s
 meta: Overview Meta
 permalink: /lists/
 ---
