@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: From a list to Kubernetes 
+title: Put Your Best Lists to Kubernetes on GCP
 email: Dr.Marcus.Semling@gmail.com
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Start with a list, then a local program, then a web app and finally a K8s-based service
+  Start with a list, then a local program, then a Cloud app and finally a K8s-based service
 baseurl: "/pages/D027555/fromlisttok8s" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -32,6 +32,8 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  
 
 # Exclude from processing.
 # The following items will not be processed, by default.
