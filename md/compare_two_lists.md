@@ -39,6 +39,23 @@ If you got two lists in which you know of, suspect or at least check for duplica
 - Apply the function 'remove duplicates'. 
 
 
+## Finding identical or missing entries
+
+If you need to find values of key fields that are the same in both lists, then you can use build-in functions in Excel.
+With the same tools, you can also identify values that only occur in the one or in the other table. 
+
+For example, you want to check, if the name "Sarah D. Schmitz" appears in your original list (call it list A) and also in the new list (list B).
+
+In Excel, you can use the commands MATCH or LOOKUP. There is plenty documentation how to use these commands. 
+
+Similarly, if you search for new names in list B that you want to identify before you add them to list B, you can use the same commands.
+You might want to combine them with ISERROR.
+
+
+
+
+
+
 
 
 
