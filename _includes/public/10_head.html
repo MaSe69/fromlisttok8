@@ -12,7 +12,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="icon" type="image/png" href="{{ site.baseUrl }}images/img_layout/xk8s_logo.png" sizes="32x32">
-  <title>{{ page.title }}</title>
+
+  <title>
+    {%if page.title %}
+    {{ page.title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+  </title>
 
   <!-- CSS - Bootstrap 4-->
   <link rel="stylesheet" href="{{ site.baseUrl }}css/bootstrap.css">
@@ -24,5 +31,5 @@
 
   <!-- Bootstrap Validate -->
   <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
-
+  {% seo %}
 </head>
