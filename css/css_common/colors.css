@@ -1,4 +1,4 @@
-:root { 
+:root {
   --blue10: #edf4ff!important;
   --blue20: #c9deff!important;
   --blue30: #97c1ff!important;
@@ -10,9 +10,18 @@
   --blue90: #061f80!important;
   --blue100: #051243!important;
   --prussianblue: #113265!important;
-
   --card-bg-color: #061f80!important;
   --card-color: #dfe9e7!important;
-  --text-color: black; 
-  --fullstack-red:  rgb(160, 79, 79);
-  }
+  --text-color: black;
+  --fullstack-red: rgb(160, 79, 79);
+  --red10: #fff1f1!important;
+  --red20: #ffd7d9!important;
+  --red30: #ffb3b8!important;
+  --red40: #ff8389!important;
+  --red50: #fa4d56!important;
+  --red60: #da1e28!important;
+  --red70: #a2191f!important;
+  --red80: #750e13!important;
+  --red90: #520408!important;
+  --red100: #2d0709!important;
+}

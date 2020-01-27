@@ -7,6 +7,7 @@
   max-width: 3840px;
   background-color: var(--prussianblue);
   background-color: whitesmoke;
+  background-color: var(--red90);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-family: 'Ubuntu';
 }
@@ -16,8 +17,7 @@
   flex: 0 0 10px;
   display: flex;
   padding: 10px 0 0 0;
-  background-color: var(--blue100);
-  background-color: var(--prussianblue);
+  background-color: var(--red100);
   border-bottom: 1px solid var(--blue10);
 }
 
@@ -44,7 +44,7 @@
 .HolyGrail_footer {
   flex: 0 0 100px;
   display: flex;
-  background-color: var(--prussianblue);
+  background-color: var(--red100);
   color: whitesmoke;
 }
 
