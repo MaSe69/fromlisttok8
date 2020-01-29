@@ -2,7 +2,7 @@
 layout: page_public
 title: LIst to K8s
 meta: Overview Meta
-permalink: /localprogram/
+permalink: /overview_localprogram/
 ---
 
 # Local program
@@ -34,21 +34,21 @@ Python has various data formats.
 
 You might be familiar to arrays. You can easily start with an array.
 
-<p><code>
+<code>
 array = ["Marco Ehrlichmann"]
-</p><p>
+<br>
 print(array[0])
-</code></p>
+</code>
+
 
 Next, you could expand to nested arrays. 
 
 However, in Python the "Dictionnary" structure is much more convenient and should be used. 
 
-<p><code>
-dict = {"Marco Ehrlichmann": 50, "Marina Schuster": 0}
-</p><p>
+<code>
+dict = {"Marco Ehrlichmann": 50, "Marina Schuster": 0} <br>
 print(dict["Marco Ehrlichmann"])
-</code></p>
+</code>
 
 You get the point how to expand the dictionnary to include all names and their payments. 
 You would have to insert into the coding any change of payment. Obviously, this is more tedious and error-prone than maintaining the data in an Excel.

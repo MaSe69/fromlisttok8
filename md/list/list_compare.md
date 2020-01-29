@@ -2,7 +2,7 @@
 layout: page_public
 title: List to K8s
 meta: Overview Meta
-permalink: /compare_two_lists/
+permalink: /list_compare/
 ---
 
 # Compare two lists

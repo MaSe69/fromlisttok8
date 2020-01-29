@@ -1,0 +1,175 @@
+---
+layout: page_public
+title: List to K8s
+meta: Overview Meta
+permalink: /scenario_r/
+---
+
+
+# Scenario R1: A registration list
+
+
+# Example
+
+## The Story
+
+You got the following task:
+
+There is somebody or many, e.g. our boss, your team, your big family, who want to organize something. In business, he, she or they are called your stakeholders.
+Your stakeholder wants to organize an event. Let's say an evening event. The invitees are known, e.g. members of the team, members of an organization, family members, customers. 
+For cases when the invitees are not all known at the beginningm, see [Example for registrations](..//example_registrations).
+
+However, it is not for free for the invitees. Invitees need to register by transferring a payment in advance. The payment turns an 'invitee' into a 'participant'.
+
+Some time before the event, it needs to be decided, if the event should take place. The criterion is a minimum number of payments received. If there are sufficient participants, the participants shall get an invitation to the event.
+
+
+## A straightforward, anonymous solution in practice
+
+The problem above can be solved and was already solved in practice in the following way: 
+
+- Somebody writes an email to 'all participants' including payment details until a deadline.
+- An invitee does or does not transfer money until the deadline.
+- After the deadline, somebody reports, if there are sufficient payments.
+- The organization of the event is continued or discontinued.
+
+In a basic scenario, it is sufficient to count the transfers on the receiving account on the deadline.
+It is easier, if the scenario can remain 'anonymous', e.g. a second email after the deadline states:
+
+"Dear invitees, the event will take place. If you have paid, you are welcome."
+
+
+## Adding identities
+
+The problem gets a bit tougher, when identities are required.
+Your stakeholder suggests to 
+- Remind invitees who did not pay some days before the deadline.
+- Invite the participants.
+
+
+## A list with identities
+
+Typically, you would start with a list of invitees:
+
+{% include images/image.html imagePath = "../images/img_public/fromlist2k8s_names.jpg" imageCaption =  "Typical list for invitees. Names were created by a random name generator for German names"%}
+
+- Name of the invitee
+- Paid or not paid
+
+## The scenario
+
+Your familiy or team wants to organize an event. You get the task to do the 'administration stuff'. 
+The event costs some money, e.g. entrance fee, rent of a ball room, a share of the buffet. 
+At some point in time before the event, a decision meeting take place. 
+At least 5 invitees need to have paid their fees.
+
+Each member is invited, i.e. an invitee.
+Each member needs to pay the fixed, constant fee in advance in order to partipate, i.e. paying the fee turns an invitee into a participant.
+
+
+## The task 
+
+- The number of invitees is fixed.
+- You got the names of all invitees.
+- You need to get the information about payment.
+- You only need to check the information once, i.e. a
+
+
+The registration might be realized as an email sent by the team member to you, and the team member states that he or she wants to participate.
+
+Hence, the first task is to make a list with all registered persons.
+As the event comes with some fee, every team member must pay an amout of money.
+
+In a second step, you need to enhance the list with the information about the registree having paid his or her fee.
+
+
+## Analysis
+
+Obvious questions for analysis are
+- How many team members have registered?
+- How many have paid?
+- How much money should have been received?
+- How much payment is still open?
+
+
+## Graphical Overview
+
+For the next team meeting, you were asked to present how much money is still missing.
+With a few computations more, you can show impressively that still a substantial percentage is missing.
+
+
+## Conclusion + Discussion
+
+For a simple task, you are completely fine with a digital list as shown here. 
+Excel or LibreOffice have proven to be sufficient for such tasks.
+
+
+
+# Example: A simple registration list
+
+Let's make up an example that leads us through this and the following steps.
+Imagine you get the task to organize an event for a team. 
+Each team member can register for the event and during this registration you get the first and last name of the team member. That's all you need in this context about the person herself.
+The registration might be realized as an email sent by the team member to you, and the team member states that he or she wants to participate.
+
+Hence, the first task is to make a list with all registered persons.
+As the event comes with some fee, every team member must pay an amout of money, 50€ say.
+In a second step, you need to enhance the list with the information about the registree having paid his or her fee.
+
+
+{% include images/image.html imagePath = "../images/img_public/listwithnames.PNG" imageCaption =  "Typical list with registrees (names generated by a random name generator) and column indicating if the fee was paid"%}
+
+At the end, you have a list that does its job: to keep track of registered team members and the information whether or the registree has paid his or her fee.
+
+
+
+## Analysis
+
+Obvious questions for analysis are
+- How many team members have registered?
+- How many have paid?
+- How much money should have been received?
+- How much payment is still open?
+
+
+
+{% include images/image.html imagePath = "../images/img_public/PivotNamesPaid.PNG" imageCaption = 
+"Pivot list showing the names of team members who already paid their fees and the sum of collected fees" %}
+
+A Pivot table can very easily be created and configured. 
+The Pivot table shows you nicely who has paid the fee, how much the total paied amount should be and the number of employees who paid.
+
+
+## Graphical Overview
+
+For the next team meeting, you were asked to present how much money is still missing.
+With a few computations more, you can show impressively that still a substantial percentage is missing.
+
+{% include images/image.html imagePath = "../images/img_public/GraphForNamesPayment.PNG" imageCaption = "Graphics showing the percentage of missing fees" %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

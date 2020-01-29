@@ -15,11 +15,19 @@ However, Kubernetes comes with quite some overhead and it can be expensive when 
 This leads to the question, if containerization is really always necessary. If not, what would be appropriate steps leading to a containerized application.
 
 
-# A Story and Examples
+# Scenarios
 
 As the matter is complex, it is best to go on this journey with a story.
-Taken from real life, I start with a simple example and evolve it slowly to complexity.
-[Story and Examples](../example_start)
+Taken from real life, we start with a simples scenarios to illustrate the tools
+
+- [Recipes for baking](../scenario_b)
+- [Registration and Fee](../scenario_r)
+
+These scenarios are detailed out in each section as
+- list
+- local program
+- web application
+- global service
 
 
 ## Starting small - and sketching until it fits
@@ -73,42 +81,3 @@ A Cloud service
 The features above are technologically best realized by containerized software. Containers can be deployed to available hardware to make optimium use of that hardware. Hence, the overall costs for hardware usage gets minimized, and hence the costs for each serice can go down in principle. 
 Together with a suitable architecture containers can make it easier for a larger application to continue to grow.
 Kubernetes is the de facto standard to manage such containers. Kubernetes inherits from Google's Borg system. In general, many experts assess Google to be most advanced in this area. Hence, starting on GCP with containrization might be felt as a good and natural choice.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

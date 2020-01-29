@@ -2,7 +2,7 @@
 layout: page_public
 title: List to K8s
 meta: Overview Meta
-permalink: /scenario_recipes/
+permalink: /scenario_b/
 ---
 
 
