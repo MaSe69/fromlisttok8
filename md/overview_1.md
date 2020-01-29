@@ -2,7 +2,7 @@
 layout: page_public
 title: From Lists to K8s
 meta: Overview Meta
-permalink: /fromliststok8sservices/
+permalink: /overview_1/
 ---
 
 # From Lists to K8s Services
@@ -24,10 +24,10 @@ Taken from real life, we start with a simples scenarios to illustrate the tools
 - [Registration and Fee](../scenario_r)
 
 These scenarios are detailed out in each section as
-- list
-- local program
-- web application
-- global service
+- List
+- Program locally
+- Cloud application
+- Global service
 
 
 ## Starting small - and sketching until it fits

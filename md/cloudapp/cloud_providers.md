@@ -2,7 +2,7 @@
 layout: page_public
 title: List to K8s
 meta: Overview Meta
-permalink: /cloudapp/
+permalink: /cloud_providers/
 ---
 
 # Cloud Application

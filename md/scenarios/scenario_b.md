@@ -46,7 +46,7 @@ Though this is possible, it comes with the disadvantage that lists are not reall
 Create structures to hold the ingredients and structures to hold the instructions.
 
 
-### Web Application
+### Cloud Application
 
 As your output is static, a static web site might be sufficient for your purpose.
 On your mobile, your web page can suit your needs such that you just see exactly what you want to.
@@ -68,7 +68,7 @@ might be sufficient for most people in most of the cases.
 
 If you really want to have your own list, 2 out of the 4 solutions discussed here stand out:
 - An Excel sheet, perhaps tuned to be good to read on your mobile.
-- A web appliction.
+- A cloud appliction.
 
 
 
