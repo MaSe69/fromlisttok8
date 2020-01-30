@@ -30,7 +30,6 @@ Here, the choice is for Google Cloud Platform (GCP).
 
 
 
-
 ## Google Cloud Platform and its VM types
 
 
@@ -47,7 +46,34 @@ As it was described
 Though it would be easier to continue with the Googl App Engine, e.g. because Python comes pre-installed. Here, GCE is used, mainly because the transition to GKE will be later easier. GKE uses the Google Compute Engine.
 
 
-## Starting a VM on Google Cloud Engine
+## Create a virtual machine (VM) on Google Cloud Engine (GCE)
+
+- Use ssh to install software on your VM.
+- Connect to your Github repository
+- Run your app
+
+[Running Flasks aps on Google Cloud Engine](https://www.youtube.com/watch?v=4YAiPgJPC0A)
+
+- Create a project
+- Create an instance of a VM (Use Compute Engine Quickstart)
+-- Choose an operating system (OS)
+-- Firewall: Allow HTTP(S) traffic
+-- SSH: Open in browser window
+
+Commands
+sudo apt-get instll python-setuptools
+sudo easy_install flask markdown
+
+GitHub:
+For private repos, you need to take care of SSH keys.
+<code>
+git pull repo
+</
+code>
+
+
+
+
 
 
 
