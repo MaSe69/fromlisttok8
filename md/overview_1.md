@@ -7,21 +7,21 @@ permalink: /overview_1/
 
 # From Lists to K8s Services
 
-Kubernetes is trendy. 
-If you are a good programmer, you are expected to containerize your coding and to run it using Kubernetes.
-
-However, Kubernetes comes with quite some overhead and it can be expensive when not applied correctly. Further, a considerable skill set is required and for the first projects additional time might be needed to figure out all necessary details.
-
-This leads to the question, if containerization is really always necessary. If not, what would be appropriate steps leading to a containerized application.
-
 
 # Scenarios
 
-As the matter is complex, it is best to go on this journey with a story.
-Taken from real life, we start with a simples scenarios to illustrate the tools
+Taken from real life, we start with simple scenarios to illustrate the tools
+
+- [Big Party Room](../scenario_a1)
+- [Recipes for baking](../scenario_b)
+- [Registration and Fee](../scenario_r)
+
+# Scenarios
 
 - [Recipes for baking](../scenario_b)
 - [Registration and Fee](../scenario_r)
+
+
 
 These scenarios are detailed out in each section as
 - List
@@ -81,3 +81,12 @@ A Cloud service
 The features above are technologically best realized by containerized software. Containers can be deployed to available hardware to make optimium use of that hardware. Hence, the overall costs for hardware usage gets minimized, and hence the costs for each serice can go down in principle. 
 Together with a suitable architecture containers can make it easier for a larger application to continue to grow.
 Kubernetes is the de facto standard to manage such containers. Kubernetes inherits from Google's Borg system. In general, many experts assess Google to be most advanced in this area. Hence, starting on GCP with containrization might be felt as a good and natural choice.
+
+## Kubernetes
+
+Kubernetes is trendy. 
+If you are a good programmer, you are expected to containerize your coding and to run it using Kubernetes.
+
+However, Kubernetes comes with quite some overhead and it can be expensive when not applied correctly. Further, a considerable skill set is required and for the first projects additional time might be needed to figure out all necessary details.
+
+This leads to the question, if containerization is really always necessary. If not, what would be appropriate steps leading to a containerized application.
