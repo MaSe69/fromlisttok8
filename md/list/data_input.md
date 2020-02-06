@@ -42,14 +42,3 @@ Using csv, you typically create a new list for each list. Recommendably, you do 
 JSON is used as the standard format in web services. 
 JSON is particularly suited for one-to-many relationships. 
 Use JSON for trees.
-
-
-
-
-
-
-
-
-
-
-
