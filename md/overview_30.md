@@ -48,18 +48,7 @@ Though it would be easier to continue with the Googl App Engine, e.g. because Py
 ## Create a virtual machine (VM) on Google Cloud Engine (GCE)
 
 
-[Create a virtual machine (VM) on Google Cloud Engine (GCE)](cloudapp/gcpce_flask.md)
-
-
-
-
-
-
-
-
-
-
-
+- [Create a virtual machine (VM) on Google Cloud Engine (GCE)](../gcpce_flask)
 
 
 
