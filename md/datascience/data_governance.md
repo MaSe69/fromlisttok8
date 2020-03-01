@@ -2,7 +2,7 @@
 layout: page_public
 title: From Lists to K8s
 meta: Overview Meta
-permalink: /overview_general/
+permalink: /data_governance/
 ---
 
 # General Overview
