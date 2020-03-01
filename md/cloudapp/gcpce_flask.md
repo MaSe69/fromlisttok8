@@ -7,56 +7,42 @@ permalink: /gcpce_flask/
 
 # Simple Flask App on GCP Compute Engine
 
-
 ## Create a VM on Compute Engine
 
 In Compute Engine, choose VM instances.
 
 On the tab "Create an instance", 
 - type a name for your VM
-- select a zone (nearest to you or cheapest)
-- select a machine type (for development, the cheapest one will do)
-    - micro, f1
-- on firewall, tick at least HTTP, or also HTTPS
+- select a zone 
+- select the operating system
+- select a machine type 
+- accept HTTP and HTTPS requests
 
-Push button 'Create'. 
-Wait, until the VM is created.
-
-
-## Create the flask flile
-
-SSH into your VM
-
-<code>
-vim server.py
-</code>
+After the VM is available
+- SSH into your VM
 
 
+## Installations on the VM
 
-Install pip
+Python is already installed.
 
-<code>
-sudo easy-install pip
-</code>
+- Install pip
+- Install Flask
 
-Install Flask
+Optional:
+- Install an editor, e.g. PyCharm
+- Configure link to GitHub.com
 
-<code>
-sudo pip install flask
-pip3 install flask
-</code>
 
-Run the Flask application
+## Flask
 
-<code>
-sudo python server.py
-</code>
-
+- Copy+Paste an existing Flask application to the editor running on the VM
+- Run the Flask application
+- Test the Flask app with the external IP.
 
 ## References
 
 - [GCP Cloud Engine Documentation](https://cloud.google.com/python/tutorials/getting-started-on-compute-engine)
-
 
 - Use ssh to install software on your VM.
 - Connect to your Github repository
@@ -70,12 +56,8 @@ sudo python server.py
 -- Firewall: Allow HTTP(S) traffic
 -- SSH: Open in browser window
 
-Commands
-sudo apt-get install python-setuptools
-sudo easy_install flask markdown
-
 GitHub:
-For private repos, you need to take care of SSH keys.
+For private repositories, you need to take care of SSH keys.
 
 <code>
 git pull repo

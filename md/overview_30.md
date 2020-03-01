@@ -15,10 +15,10 @@ The Cloud Providers that I am familiar with include
 - [Google Cloud Platform](https://cloud.google.com/)
 - [Azure](https://azure.microsoft.com/en-us/)
 - [AWS](https://aws.amazon.com/)
-- [Alicloud](https://www.alibabacloud.com/)
+- [Alibaba Cloud](https://www.alibabacloud.com/)
 
 Typically, a Cloud Provider has an 'always free' offering, which might be sufficient for the purposes here.
-Further, there is mostl a 12 month free account offering, which should give you ample of time to try out your new Cloud application.
+Further, there is mostly a 12 month free account offering, which should give you ample of time to try out your new Cloud application.
 
 Beyond that however it has to be said that the Cloud Provider wants money from you. As you typically have to provide a credit card on opening your (free) account, there is no way to avoid these charges. Alternatively, if you do not want to pay, you need to accept that the Cloud Provider shuts down your service. 
 
@@ -42,14 +42,12 @@ As it was described
 
 "Compute Engine is an Infrastructure-as-a-Service. You have to create and configure your own virtual machine instances."
 
-Though it would be easier to continue with the Googl App Engine, e.g. because Python comes pre-installed. Here, GCE is used, mainly because the transition to GKE will be later easier. GKE uses the Google Compute Engine.
+Though it would be easier to continue with the Google App Engine, e.g. because Python comes pre-installed. Here, GCE is used, mainly because the transition to GKE will be later easier. GKE uses the Google Compute Engine.
 
 
 ## Create a virtual machine (VM) on Google Cloud Engine (GCE)
 
 
 - [Create a virtual machine (VM) on Google Cloud Engine (GCE)](../gcpce_flask)
-
-
 
 

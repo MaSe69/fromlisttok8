@@ -2,8 +2,11 @@
 layout: page_public
 title: From Lists to K8s
 meta: Overview Meta
-permalink: /overview_1/
+permalink: /overview_business/
 ---
+
+# Business Overview
+
 
 
 # Scenarios
