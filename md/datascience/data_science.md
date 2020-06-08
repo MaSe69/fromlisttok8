@@ -7,3 +7,5 @@ permalink: /data_science/
 
 # Data Science
 
+[create_table]
+
