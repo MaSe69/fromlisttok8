@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   color: black;
+  text-align: justify;
 }
 
 h1 {
@@ -66,10 +67,57 @@ li {
   list-style-type: disc;
 }
 
-code {
-  margin: 0px 0px 0px 40px;
-  padding: 5px 50px 5px 10px;
-  font-weight: 800;
-  background: black;
-  color: white;
+
+
+/* 
+blockquote {
+  font-size: 20px;
+  width: 60%;
+  margin: 20px auto 20px 60px;
+  font-family: Kalam;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 20px 40px;
+  border-left: 8px solid #78C0A8;
+  line-height: 1.6;
+  position: relative;
+  background-color: rgb(215, 224, 213);
 }
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #78C0A8;
+  font-size: 4em;
+  font-size: 2em;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  color: #78C0A8;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 1em;
+  background-color: rgb(215, 224, 213);
+}
+
+blockquote span {
+  display: block;
+  color: #333333;
+  color: #78C0A8;
+  text-align: right;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 1em;
+} */
