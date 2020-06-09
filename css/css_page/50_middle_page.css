@@ -74,6 +74,7 @@ img {
 
 strong {
   color: var(--blue90);
+  color: rgb(121, 20, 25);
   font-weight: 900;
 }
 

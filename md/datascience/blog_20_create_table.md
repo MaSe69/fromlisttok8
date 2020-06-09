@@ -5,17 +5,29 @@ meta: Overview Meta
 permalink: /create_table/
 ---
 
-# Create Table
+# Blog 1: Create Tables
 
-In this first technical part, I create some tables.
+Tables are the building blocks of data science.
+Let's start to create some tables.
+Then, we quickly move on to embed such tables into full-scale programs.
 
-For the accounting scenario, typically, there are numbers in a period of time, e.g. months. These numbers could be revenue or costs in various accounts.
+We will focus on tables for two scenarios:
+- an accounting scenario
+- a ranking scenario.
 
-## Step 1: A First Table For Accounting
+For the accounting scenario, we start with costs in various accounts over months.
+For the rating scenario, we start with persons and their ratings of certain things.
 
-I intend to create a table with months as columns and accounts as rows. 
 
-At first, I create a list for the accounts, then a list for the months. The point is to use the pandas command to create the dataframe using the accounts as index and the months as columns. Finally, I fill the values of the cells with zeros.
+## Step 1: A First Table
+
+We want to create a table with accounts and months. All values shall be 0.
+Let's put the months as columns and accounts as rows.
+
+- At first, we create a list for the accounts.
+- Second, a list for the months. 
+- Third, we use the pandas command to create the dataframe using the accounts as index and the months as columns.
+- Finally, we fill the values of the cells with zeros.
 
 **Coding**
 >
@@ -37,12 +49,23 @@ As intended, the output is a table.
 
 ---
 
+This completes the first part.
+In summary, we created a simple table realized as a Pandas dataframe.
 
-## Step 2: Make the columns more dynamic 
+## Step 2: Make the columns more dynamic
 
-Adding months to a list should be automated. Using pandas’ period_range, the start, the increment and the repetition can be easily defined.
-months = pd.period_range(start="2020-01-01", periods=8, freq="M")
-Further, the cell values should reflect values in a currency. Random numbers with 2 digits would be nice.
+In the next step, we want to achieve flexibility on the number of rows.
+We started with months, but the time period could also be days or weeks or else.
+Specifying the number of a columns to a table should of course be flexible.
+
+Using pandas’ period_range, the start, the increment and the repetition can be easily defined. Setting the "frequency" to "M", we stick with months, but could easily change to days, quarters, years or other time periods.
+
+
+**Coding**
+>
+    months = pd.period_range(start="2020-01-01", periods=8, freq="M")
+
+Then, the cell values should reflect values in a currency. Random numbers with 2 digits - representing currency values - would be nice.
 This can be achieved as follows:
 
 **Coding**
@@ -51,7 +74,8 @@ This can be achieved as follows:
     cellValues = cellValues.astype(float).round(2)
     df = pd.DataFrame(cellValues, index=accounts, columns=months)
 
-Now the result looks much more like an interesting accounting table.
+Now the result looks much more like an real-life accounting table.
+
 **Output**
 >
                2020-01  2020-02  2020-03  2020-04  2020-05  2020-06  2020-07  2020-08
@@ -60,44 +84,55 @@ Now the result looks much more like an interesting accounting table.
     Account_D   555.01   591.41   825.60   403.47   856.62   485.57   716.13   602.52
     Account_X   506.24   197.62   912.49   717.87   988.16   585.67   957.28   112.60
 
+ In summary, we extended the table to a flexible number of columns for time periods.
+
 ## Step 3: Define a Function for Table Creation
 
-The column should represent any time interval, e.g. days, weeks, months, years, and certainly should start at any time to cover a many iterations as we like.
-The number of accounts should also be flexible and determined by the number of accounts that we provide in the list.
+The Pandas syntax to create dataframes or to create a list for time periods is quite special in the sense that you might have to look it up every time you use it. You might want to wrap this syntax hence in your personal programming style.
 
-Re-use is typically done by defining a function. Function have parameters. Providing the required mandatory input parameters can be painful, because it requires all interfaces to be adapted at the same time to avoid syntax errors. Luckily, a single parameter when defined as a dictionary can do the trick in Python. I call that general purpose parameter for short ‘para’. 
-Functions need to be defined before they are called. Here is a possible general implementation for the purpose described.
+In a professional program you also should not repeat coding, but reuse or refine existing one. As we know now how to create a table, let's wrap it to create many, many more tables.
 
-**Coding**
+Re-use is typically done by defining a function. Functions need to be defined before they are called. Hence, we have to deal with this function first.
+
+- The column should represent any time interval, e.g. days, weeks, months, years, and certainly should start at any time to cover as many iterations as we like.
+- The number of accounts should also be flexible and determined by the number of accounts that we provide in the list.
+
+Function have parameters. Providing the required mandatory input parameters can be painful, because it requires all interfaces to be adapted at the same time to avoid syntax errors. 
+
+Luckily, a single parameter, when defined as a dictionary, can do the trick in Python. Let's call that general purpose parameter for short ‘para’. The local data frame shall be called "dfl".
+
+
+**The Function**
 >
     def pdDFFromListsCreate(para):
         dfl = pd.DataFrame(para["CellValues"], index=para["Index"], columns=para["Columns"])
         return dfl
-    The parameterization is chosen to be 
+
+**Parameters for the columns**
+>
     para["StartDate"] = "2020-06-01"
     para["TimeInterval"] = "D"
-    para["NrColumns"] = 10
-    para["Columns"] = myMonthsPD = pd.period_range(
+    para["NrColumns"] = 6
+    para["Columns"] = pd.period_range(
         start=para["StartDate"], periods=para["NrColumns"], freq=para["TimeInterval"]
     )
 
-## Rows
 
-**Coding**
+**Parameters for the rows**
+
 >
     accounts = ["Account_A", "Account_B", "Account_D", "Account_F", "Account_X"]
     para["Index"] = accounts
     para["NrRows"] = len(accounts)
 
-## Values
+**Parameters for the values**
 
-**Coding**
 >
     cellValues = np.random.rand(para["NrRows"], para["NrColumns"]) * 1000
     cellValues = cellValues.astype(float).round(2)
     para["CellValues"] = cellValues
 
-The output is a larger table
+The output is a table with six days as columns and with an additional row. 
 
 **Output**
 >
@@ -107,3 +142,13 @@ The output is a larger table
     Account_D       32.24      629.63      442.73      916.11      827.24      314.53
     Account_F      444.54      298.93       39.16      600.06      674.27      175.03
     Account_X      792.80      289.78      189.62      560.98      407.42      468.28
+
+
+In summary, we can call a function in any program that returns a table with a specified number of time periods, accounts and some random values in the rows.
+
+## Summary and conclusion
+
+It is easy to create tables as dataframes in Pandas.
+
+The task was to create meaningful tables to be used for testing in professional programs.
+This is an entry point to a full-scale data science.
