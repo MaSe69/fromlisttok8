@@ -2,7 +2,7 @@
 layout: page_public
 title: From Lists to K8s
 meta: Overview Meta
-permalink: /create_table/
+permalink: /create_tables/
 ---
 
 # Blog 1: Create Tables
