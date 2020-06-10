@@ -5,7 +5,7 @@ meta: Overview Meta
 permalink: /create_tables/
 ---
 
-# Blog 1: Create Tables
+# Create Tables
 
 Tables are the building blocks of data science.
 Let's start to create some tables.
