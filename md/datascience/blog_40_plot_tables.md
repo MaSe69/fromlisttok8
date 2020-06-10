@@ -88,6 +88,6 @@ As many people are used to graphs as shown in Excel, it is worth to tune the plo
 Plot showing all columns previously created.
 
 **Image**
-{% include images/image.html imagePath = "../images/img_blog/All Columns.png" imageCaption = "Beautified visualization of the all sample data."%}
+{% include images/image.html imagePath = "../images/img_blog/All Columns.png" imageCaption = "Beautified visualization of all sample data."%}
 
 Pandas visualization using Matplotlib. Not quite, but close enough to an Excel visualization for now.
