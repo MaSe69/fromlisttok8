@@ -26,7 +26,8 @@ Python returns to us the current path, which is shall be called "stem" here. Usi
     para["Stem"] = os.getcwd()
 
 Based on this stem, we can define a path relative in our programming environment.
-Finally, we need a filename. The filename itself can be separated into a "basename" and an "extension". The extenion varies here depending, if we want to write to a csv-file or to an Excel.
+
+Finally, we need a filename. The filename itself can be separated into a "basename" and an "extension". The extension varies here depending, if we want to write to a csv-file or to an Excel. Keeping the extension undefined, it can be set by the called function. In this way, the file can be written without further code modification to several formats.
 
 
 
@@ -49,65 +50,55 @@ Given these parameters, the function call can be made to write the file in csv-f
 
 As a result, we find a new csv-file created on the file system.
 
+**Image**
 {% include images/image.html imagePath = "../images/img_public/Accounts.png" imageCaption =  "Table saved as csv-file."%}
 
 ## Step 2: Read from a CSV-File
 
+This tool certainly opens up the possibility to read tables into Pandas dataframes.
+As can be expected, the commands are quite similar.
 
+**Coding**
+>
+    fileAbsPath = para["Stem"] + para["Path"] + para["Basename"] + ".csv"
+    df = pd.read_csv(
+        fileAbsPath, sep=para["Delimiter"], 
+        header=0, index_col=0, skipinitialspace=True
+    )
 
+Because it might be boring to read exactly the file that was written before, let's make use of having random numbers in each table. Running the write program with the basename "Accounts_previous" gives us a 'previous version of this table' on the file system, when the program is executed once more. Hence, the current table, which is written to the file system has different value from that one read from the file system.
 
-
-
-
-
+At the end of this program, we have two tables, Acounts.csv and Accounts_Previous.csv, at runtime and on the file system.
+Both tables have the same column names and row names, but different cell values.
 
 ## Step 3: Save to an Excel
 
-Specify the Sheet.
+Working with the Excel-Format is pretty much the same as working with csv-files.
+
+A few particularities:
+- we do not need to specify a deliminator or separator
+- we can specify the Sheet in Excel.
+
+**Image**
+{% include images/image.html imagePath = "../images/img_public/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayedwith LibreCalc."%}
+
 
 ## Step 4: Read from an Excel
 
+Last, but not least, we want to read from an Excel.
+Reading an external table available in Excel-Format might be the most common use case.
 
-We want to create a table with accounts and months. All values shall be 0.
-Let's put the months as columns and accounts as rows.
-
-- At first, we create a list for the accounts.
-- Second, a list for the months. 
-- Third, we use the pandas command to create the dataframe using the accounts as index and the months as columns.
-- Finally, we fill the values of the cells with zeros.
-
-
-
-
-As intended, the output is a table.
-
-**Output**
+**Coding**
 >
-                January  February  March
-    Account_A        0         0      0
-    Account_B        0         0      0
-    Account_D        0         0      0
-    Account_X        0         0      0
+    dfl = pd.read_excel(fileAbsPath, index_col=0)
 
----
+Before reading the table, I edited the first column to make it more plausible that it was edited in between saving and reading.
 
-This completes the first part.
-In summary, we created a simple table realized as a Pandas dataframe.
+**Image**
+{% include images/image.html imagePath = "../images/img_public/Excel_as_read.png" imageCaption =  "Table as read from Excel-Formatted file."%}
 
-## Step 2: Make the columns more dynamic
-Previously, we created some tables. Now it is time to save them.
-We only save to the file system. A database is not needed at this stage. Much further down the road there comes a point in time when adding functionality would become equal to rewriting a database. Then, it is worth considering to use an existing database.
-Here we handle, for a table in dataframe format
-    • Write to a csv-file
-    • Read from a csv-file
-    • Write as a Excel
-    • Read from Excel
 
-Step 1: Save to a CSV-File
+## Summary
 
-Step 2: Read from a CSV-File
-
-Step 3: Save to an Excel
-Specify the Sheet.
-
-Step 4: Read from an Excel
+The task was to save and read tables created with Pandas dataframes to the file system.
+We saved by using both the csv-format and the Excel-format.
