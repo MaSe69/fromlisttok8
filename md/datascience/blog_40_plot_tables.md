@@ -28,6 +28,10 @@ Based on the csv-file created earlier, we want to plot that data. For simplicity
 
 A new window pops up that contains the plot.
 
+**Image**
+{% include images/image.html imagePath = "../images/img_blog/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayed with LibreCalc."%}
+
+
 A simple bar plot based on the previous data in a table.
 
 ## Step 2: Save the Plot as an Image
@@ -54,7 +58,7 @@ Here is some coding indicating how to either save the image to your file system 
         plt.show(block=False)
         time.sleep(para["Sleep"])
 
-Literature suggests that the “png”-format is suitable for this kind of images. It suffices to specify the extenaion of your filename as “.png”.
+Literature suggests that the “png”-format is suitable for this kind of images. It suffices to specify the extension of your filename as “.png”.
 
 ## Step 3: More Data in the Plot
 

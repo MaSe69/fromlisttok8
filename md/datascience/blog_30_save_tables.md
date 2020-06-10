@@ -51,7 +51,7 @@ Given these parameters, the function call can be made to write the file in csv-f
 As a result, we find a new csv-file created on the file system.
 
 **Image**
-{% include images/image.html imagePath = "../images/img_public/Accounts.png" imageCaption =  "Table saved as csv-file."%}
+{% include images/image.html imagePath = "../images/img_blog/Accounts.png" imageCaption =  "Table saved as csv-file."%}
 
 ## Step 2: Read from a CSV-File
 
@@ -68,7 +68,7 @@ As can be expected, the commands are quite similar.
 
 Because it might be boring to read exactly the file that was written before, let's make use of having random numbers in each table. Running the write program with the basename "Accounts_previous" gives us a 'previous version of this table' on the file system, when the program is executed once more. Hence, the current table, which is written to the file system has different value from that one read from the file system.
 
-At the end of this program, we have two tables, Acounts.csv and Accounts_Previous.csv, at runtime and on the file system.
+At the end of this program, we have two tables, Accounts.csv and Accounts_Previous.csv, at runtime and on the file system.
 Both tables have the same column names and row names, but different cell values.
 
 ## Step 3: Save to an Excel
@@ -80,7 +80,7 @@ A few particularities:
 - we can specify the Sheet in Excel.
 
 **Image**
-{% include images/image.html imagePath = "../images/img_public/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayedwith LibreCalc."%}
+{% include images/image.html imagePath = "../images/img_blog/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayed with LibreCalc."%}
 
 
 ## Step 4: Read from an Excel
@@ -95,7 +95,7 @@ Reading an external table available in Excel-Format might be the most common use
 Before reading the table, I edited the first column to make it more plausible that it was edited in between saving and reading.
 
 **Image**
-{% include images/image.html imagePath = "../images/img_public/Excel_as_read.png" imageCaption =  "Table as read from Excel-Formatted file."%}
+{% include images/image.html imagePath = "../images/img_blog/Excel_as_read.png" imageCaption =  "Table as read from Excel-Formatted file."%}
 
 
 ## Summary
