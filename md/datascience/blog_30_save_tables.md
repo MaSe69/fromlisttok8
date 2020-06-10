@@ -9,7 +9,9 @@ permalink: /save_tables/
 
 Previously, we created some tables. Now it is time to save them.
 
-We only save to the file system. A database is not needed at this stage. Much further down the road there comes a point in time when adding functionality would become equal to rewriting a database. Then, it is worth considering to use an existing database.
+We only save to the file system. A database is not needed at this stage.
+Much further down the road there comes a point in time when adding functionality would become equal to rewriting a database.
+Then, it is worth considering to use an existing database.
 
 Here we handle, for a table in dataframe format
 
@@ -28,8 +30,6 @@ Python returns to us the current path, which is shall be called "stem" here. Usi
 Based on this stem, we can define a path relative in our programming environment.
 
 Finally, we need a filename. The filename itself can be separated into a "basename" and an "extension". The extension varies here depending, if we want to write to a csv-file or to an Excel. Keeping the extension undefined, it can be set by the called function. In this way, the file can be written without further code modification to several formats.
-
-
 
 ## Step 1: Save to a CSV-File
 
@@ -76,12 +76,12 @@ Both tables have the same column names and row names, but different cell values.
 Working with the Excel-Format is pretty much the same as working with csv-files.
 
 A few particularities:
+
 - we do not need to specify a deliminator or separator
 - we can specify the Sheet in Excel.
 
 **Image**
 {% include images/image.html imagePath = "../images/img_blog/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayed with LibreCalc."%}
-
 
 ## Step 4: Read from an Excel
 
@@ -90,13 +90,12 @@ Reading an external table available in Excel-Format might be the most common use
 
 **Coding**
 >
-    dfl = pd.read_excel(fileAbsPath, index_col=0)
+    df = pd.read_excel(fileAbsPath, index_col=0)
 
 Before reading the table, I edited the first column to make it more plausible that it was edited in between saving and reading.
 
 **Image**
 {% include images/image.html imagePath = "../images/img_blog/Excel_as_read.png" imageCaption =  "Table as read from Excel-Formatted file."%}
-
 
 ## Summary
 

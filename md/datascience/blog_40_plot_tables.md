@@ -10,53 +10,60 @@ permalink: /plot_tables/
 This part is all about visualizing data in tables.
 Visualization is pretty much the first thing you usually do when receiving new data.
 
-## Step 1: Plot a Column
+Pandas works with [matplotlib](https://matplotlib.org/).
+Matplotlib offers an abundance of graphics.
+We start here with the simple bar chart.
 
-Based on the csv-file created earlier, we want to plot that data. For simplicity, we start with only one column. 
+## Step 1: Plot a Month For Each Account as Bar Chart
+
+Based on the csv-file created earlier, we want to plot that data.
+For simplicity, we start with only one column.
+
+At the heart of the function call for the graphics is the import of the matplotlib library for pyplot and the call of the "show"-function.
+Prior to showing the graph, some configurations have to be made. At least the values for the x-axis and the y-axis have to be specified.
+Using dataframes, the index can be used as x-axis.
 
 **Coding**
 >
+    import matplotlib.pyplot as plt
+>
     df.plot.bar(
-        y=para["Y-Axis"],
-        use_index=True,
-        title=para["Title"],
-        figsize=para["FigSize"],
-        legend=myLegend,
-        rot=0,
+    use_index=True,
+    y=para["Y-Axis"],
+    legend=False, 
+    rot=0,
     )
     plt.show()
 
 A new window pops up that contains the plot.
 
 **Image**
-{% include images/image.html imagePath = "../images/img_blog/Accounts_as_Excel.png" imageCaption =  "Table saved in Excel-Format but displayed with LibreCalc."%}
+{% include images/image.html imagePath = "../images/img_blog/Plot_10.png" imageCaption = "A bar graph created from the accounting scenario."%}
 
+Some recommendations:
 
-A simple bar plot based on the previous data in a table.
+- The default legend overlays with the bars. Hence, the legend is omitted here.
+- The x-axis labels would not be readable without rotating them to position '0'
+- Previous plots should be closed, which can be done using plt.close("all") before calling the new graph.
+
+As default, a pop-up is displayed. This pop-up remains until it is closed manually. After having clicked away many, many such pop-ups while refining the graphical output,
+you might want to limit the duration of this pop-up.
+
+**Coding**
+>
+    plt.show(block=False)
+    time.sleep(para["ShowGraphTime"])
+    plt.close()
 
 ## Step 2: Save the Plot as an Image
 
-Often, you want to re-use the image in your presentation like a Powerpoint slide. You can certainly make a screenshot of the pop-up window and embed that screenshot.
+We want to save the image as a file, without the need to create a screenshot manually.
+After having defined the full path to which the plot shall be saved, the command "savefig" fulfills this task.
 
 **Coding**
 >
+    plotFullPath = para["Stem"] + para["PlotPath"] + para["PlotFileName"]
     plt.savefig(plotFullPath, dpi=300)
-
-
-Another reason to save the picture is to stop having to close the pop-up window after each iteration. You can limit the duration of the existence of this pop-up window.
-Here is some coding indicating how to either save the image to your file system suppressing the pop-up or to have the pop-up, but make the pop-up go away after a few seconds.
-
-**Coding**
->
-    ### When a filename for the plot is specified then save the plot
-    try:
-        _ = plt.show(block=False)
-        if para["PlotFileName"]:
-            plotFullPath = para["Stem"] + para["PlotPath"] + para["PlotFileName"]
-            plt.savefig(plotFullPath, dpi=300)
-    except:
-        plt.show(block=False)
-        time.sleep(para["Sleep"])
 
 Literature suggests that the “png”-format is suitable for this kind of images. It suffices to specify the extension of your filename as “.png”.
 
@@ -66,14 +73,21 @@ We need to specify the columns that shall be displayed. As we want to display al
 
 **Coding**
 >
-header = list(df.columns.values)
-
-Plot showing all columns previously created
-
-## Step 4: Make it more Excel Like
+    header = list(df.columns.values)
+    para["Y-Axis"] = header
+>
+    df.plot.bar(
+        use_index=True,
+        y=para["Y-Axis"],
+        legend=False, 
+        rot=0,
+        color=greenGradient,
+    )    
 
 As many people are used to graphs as shown in Excel, it is worth to tune the plots into this direction. The same data when used in Excel can easily be visualized as shown below.
+Plot showing all columns previously created.
 
-Excel visualization of the sample data.
+**Image**
+{% include images/image.html imagePath = "../images/img_blog/All Columns.png" imageCaption = "Beautified visualization of the all sample data."%}
 
-Pandas visualization using Matplotlib. Not quite but close enough to Excel.
+Pandas visualization using Matplotlib. Not quite, but close enough to an Excel visualization for now.
