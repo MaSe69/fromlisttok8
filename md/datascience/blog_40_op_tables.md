@@ -32,7 +32,7 @@ The sequence is always:
 
 Just remember to start with Alpha and to end with Omega.
 
-## Rename columns + Set index
+## Step 1: Rename columns + Set index
 
 The column names of our table saved on the file system originate from the automated creation of time periods.
 Such names are unlikely to 'sound nice'. Let's make it a bit more comfortable and give them shorter names that are easier to digest.
@@ -121,20 +121,17 @@ Dataframes can be transposed.
 
 **Coding**
 >
-    dfT = dfT.transpose()
+    df = df.transpose()
 
 **Image**
 {% include images/image.html imagePath = "../images/img_blog/Table_Transposed.png" imageCaption = "The transposed table has the months as rows."%}
 
-
 ### Out of Scope
 
-You would not compute the inversion of such a table using Pandas, i.e. df * df-1 = 1. Instead use Numpy directly.
+You would not compute the inversion of such a table using Pandas, i.e. compute dfI with df * dfI = 1. Instead, use Numpy directly for matrix inversion.
 
 ## Summary
 
 The task was to explore the table structure and its content in more detail.
 
 Further, operations that affect the whole table were described here.
-
-
